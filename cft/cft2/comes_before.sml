@@ -13,6 +13,14 @@ type time = int * int * string;
 
 fun comes_before (t1: time, t2: time) = 
 	(* fill in your code below *)
+	if #3(t1) = "AM" andalso #3(t2) = "PM" then true
+	else if #3(t1) = #3(t2) then 
+		if #1(t1) < #1(t2) then true
+		else if #1(t1) = #1(t2) then 
+			if #2(t1) < #2(t2) then true
+			else false
+		else false
+	else false 
 
 val t1 = (1, 1, "PM");
 val t2 = (2, 2, "AM");
