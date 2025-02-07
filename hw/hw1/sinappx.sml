@@ -1,4 +1,5 @@
-(* Implement the function sinappx *)
+(*Encountering issues regarding type*)
+
 fun sinappx (n, x) = 
     let 
         (* Factorial function, computes factorial for odd numbers *)
@@ -6,7 +7,7 @@ fun sinappx (n, x) =
             if Real.==(n, 1.0) then 1.0
             else n * factorial(n - 2.0)
         
-        (* Power function, computes x^n *)
+        (* Power function*)
         fun n_power (n, x) = 
             if Real.==(n, 0.0) then 1.0
             else x * n_power(n - 1.0, x)
@@ -27,7 +28,6 @@ fun sinappx (n, x) =
         helper(n, x, 0.0, 1.0, x, 1.0, 1.0)
     end;
 
-(* Test the function and print results *)
 print(Real.toString(sinappx (1000.0, 0.0)) ^ "\n");
 print(Real.toString(sinappx (1000.0, Math.pi / 2.0)) ^ "\n");
 print(Real.toString(sinappx (1000.0, ~Math.pi / 2.0)) ^ "\n");
