@@ -20,8 +20,8 @@ Hint: pay attention to negative values and Opposite.
 Check out the expected outputs from the test cases.
 *)
 
-(* Simply convert indivdual components of expression into strings recursively and concatenate*)
-fun expr_str (IntLit a) = Int.toString(a)
+(* Simply convert individual components of expression into strings recursively and concatenate*)
+fun expr_str (IntLit a) = if a >= 0 then Int.toString(a) else "(" ^ Int.toString(a) ^ ")"
 	| expr_str (Var a) = a
 	| expr_str (Times(a,b)) = "(" ^ expr_str(a) ^ "*" ^ expr_str(b) ^ ")"
 	| expr_str (Plus(a,b)) = "(" ^ expr_str(a) ^ "+" ^ expr_str(b) ^ ")"
