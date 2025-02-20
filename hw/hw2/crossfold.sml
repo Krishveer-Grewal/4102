@@ -1,5 +1,10 @@
 (* Compute the cross product with a higher-order and no use of op@ *)		      
-fun crossFold a b = 
+fun crossFold a b =
+        let
+                fun pairs x = foldl (fn y => (x, y)) 0 b
+        in
+                foldl (pairs a) 0 a
+        end; 
 
 
 fun printPair (x, y) = print("("^Int.toString(x)^","^Int.toString(y)^") ")
