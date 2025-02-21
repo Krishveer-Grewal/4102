@@ -1,10 +1,6 @@
 (* Implement qSort *)
-fun qSort nil    = 
-        | qSort l = 
-                let
-                        fun partition ([], nil) = 0 (* Base Case: Empty List*)
-                                | partition (l, pivot) = 
-                                        if 
+fun qSort nil = 
+
 
 fun printList x = if null x then print("\n")
         else (print(Int.toString((hd x))^" "); printList (tl x));

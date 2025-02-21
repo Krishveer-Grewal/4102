@@ -2,7 +2,7 @@
 (* List operator @ allowed *)
 
 (* Higher order function must take a function as argument (or return a function) *)
-(* Note: map implicitly returns [] upon empty list *)
+(* Note: map implicitly returns [] upon empty list (second argument) *)
 
 fun crossHigh a b =
         let
